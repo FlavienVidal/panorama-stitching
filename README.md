@@ -31,6 +31,15 @@ good for stitching and recognition
 
 
 
+## Results
+
+![input.png](input.png)
+
+![res1.png](res1.png)
+
+![panorama.jpeg](panorama.jpeg)
+
+
 
 1. use an opencv feature extractor and descriptor to detect and compute features on both images
 
