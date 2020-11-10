@@ -13,7 +13,7 @@ Here is the list of steps what we should do to get our final stiched result:
 
 
 How do they work?
-They extract a sparse set of features and match them to each other,
+They extract a sparse set of features and match them to each other.
 
 
 1. Detection: Identify the interest points
@@ -33,11 +33,17 @@ good for stitching and recognition
 
 ## Results
 
+#### Input images:
 ![input.png](input.png)
 
+#### Keypoint detection:
 ![res1.png](res1.png)
 
-![panorama.jpeg](panorama.jpeg)
+#### Result:
+<p align="center">
+  <img src="panorama.jpeg">
+</p>
+
 
 
 
