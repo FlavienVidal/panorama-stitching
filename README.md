@@ -30,6 +30,7 @@ There are many algorithms for estimating homographies.
 
 h<sub>1</sub> 
 T<sub>1</sub> 
+Let $\text{S}_1(N) = \sum_{p=1}^N \text{E}(p)$
 
 ## Creating Panoramas
 Two (or more) images that are taken at the same location (that is, the camera position is the same for the images) are homographically related. This is frequently used for creating panoramic images where several images are stitched together into one big mosaic. For example, the following two pictures are related by a homography:
