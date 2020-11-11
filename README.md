@@ -22,9 +22,8 @@ In the project we will make use of homographies. A homography is a 2D projective
 In essence a homography H maps 2D points (in homogeneous coordinates) according to:
 
         [ x' ]   [ h_1 h_2 h_3 ]   [ x ]
-        [ y' ] = [ h_4 h_5 h_6 ] * [ y ]    or    X' = H*X
+        [ y' ] = [ h_4 h_5 h_6 ] * [ y ]    or    X' = H*X    <img align="right" width="400" height="400" src="homography_illustration1.jpeg">
         [ w' ]   [ h_7 h_8 h_9 ]   [ w ]
-<img align="right" width="100" height="100" src="homography_illustration1.jpeg">
 
 There are many algorithms for estimating homographies.
 
