@@ -17,19 +17,33 @@ In this project we look at an example of automatically creating panoramas.
 
 
 ## Homographies
-In the project we will make use of homographies. A homography is a 2D projective transformation that maps points in one plane to another. In our case the planes are images (or planar surfaces in 3D). Homographies have many practical uses such as registering images, rectifying images, texture warping and finally in our case: creating panoramas! 
+In the project we will make use of homographies. A homography is a 2D projective transformation that maps points in one plane to another. Any two images of the same planar surface in space are related by a homography. In our case the planes are images (or planar surfaces in 3D). Homographies have many practical uses such as registering images, rectifying images, texture warping and finally in our case: creating panoramas! 
+ 
+In essence a homography H maps 2D points (in homogeneous coordinates) according to:
+
+        [ x' ]   [ h_1 h_2 h_3 ]   [ x ]
+        [ y' ] = [ h_4 h_5 h_6 ] * [ y ]    or    X' = H*X
+        [ w' ]   [ h_7 h_8 h_9 ]   [ w ]
+<img align="right" width="100" height="100" src="homography_illustration1.jpeg">
+
+There are many algorithms for estimating homographies.
+
 
 
 ## Creating Panoramas
-Two (or more) images that are taken at the same location (that is, the camera position is the same for the images) are homographically related. This is frequently used for creating panoramic images where several images are stitched together into one big mosaic. For example, I will be using this pictures: 
+Two (or more) images that are taken at the same location (that is, the camera position is the same for the images) are homographically related. This is frequently used for creating panoramic images where several images are stitched together into one big mosaic. For example, the following two pictures are related by a homography:
 ![input.png](input.png)
 
-### RANSAC
-Here we are interested in automatically finding a homography for the panorama images using a set of possible correspondences. The following figures shows the matching correspondences found automatically using AKAZE:
+
+
+## RANSAC
+Once we have homographically related images we still need to find the right homography.
+Here we are interested in automatically finding this homography for the panorama images using a set of possible correspondences. The following figures shows the matching correspondences found automatically using AKAZE:
 ![res1.png](res1.png)
 
-It is clear from the images that not all correspondences are correct.
-Then, we fit the homography using RANSAC.
+On this image it seems that the correspondences are correct.
+Then, we fit the homography using RANSAC applied to the correspondences.
+
 
 
 ## Stitching the images together
