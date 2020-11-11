@@ -20,9 +20,10 @@ In this project we look at an example of automatically creating panoramas.
 In the project we will make use of homographies. A homography is a 2D projective transformation that maps points in one plane to another. Any two images of the same planar surface in space are related by a homography. In our case the planes are images (or planar surfaces in 3D). Homographies have many practical uses such as registering images, rectifying images, texture warping and finally in our case: creating panoramas! 
  
 In essence a homography H maps 2D points (in homogeneous coordinates) according to:
+<img align="right" width="400" height="400" src="homography_illustration1.jpeg">
 
         [ x' ]   [ h_1 h_2 h_3 ]   [ x ]
-        [ y' ] = [ h_4 h_5 h_6 ] * [ y ]    or    X' = H*X    <img align="right" width="400" height="400" src="homography_illustration1.jpeg">
+        [ y' ] = [ h_4 h_5 h_6 ] * [ y ]    or    X' = H*X  
         [ w' ]   [ h_7 h_8 h_9 ]   [ w ]
 
 There are many algorithms for estimating homographies.
