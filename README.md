@@ -22,17 +22,13 @@ In the project we will make use of homographies. A homography is a 2D projective
 <img align="right" width="190" height="190" src="homography_illustration1.jpeg">
 In essence a homography H maps 2D points (in homogeneous coordinates) according to:
 
-        [ x' ]   [ h<sub>1</sub> h<sub>2</sub> h<sub>3</sub> ]   [ x ]
-        [ y' ] = [ h<sub>4</sub> h<sub>5</sub> h<sub>6</sub> ] * [ y ]    or    X' = H*X  
-        [ w' ]   [ h<sub>7</sub> h<sub>8</sub> h<sub>9</sub> ]   [ w ]
+        [ x' ]   [ h1 h2 h3 ]   [ x ]
+        [ y' ] = [ h4 h5 h6 ] * [ y ]    or    X' = H*X  
+        [ w' ]   [ h7 h8 h9 ]   [ w ]
 
 There are many algorithms for estimating homographies.
 
-h<sub>1</sub> 
-T<sub>1</sub> 
-h{1}
 
-Let $\text{S}_1(N) = \sum_{p=1}^N \text{E}(p)$
 
 ## Creating Panoramas
 Two (or more) images that are taken at the same location (that is, the camera position is the same for the images) are homographically related. This is frequently used for creating panoramic images where several images are stitched together into one big mosaic. For example, the following two pictures are related by a homography:
